@@ -32,8 +32,6 @@ const button = document.querySelector("#button");
 const inputSection = document.querySelector("#card-form");
 const thanksSection = document.querySelector("#thank-you");
 const contButton = document.querySelector("#button-continue");
-const labels = document.querySelectorAll(".form-label");
-const errMessage = document.querySelectorAll(".error");
 
 function trim(inputEl, num) {
   if (inputEl.value.length > num) inputEl.value = inputEl.value.slice(0, num);
