@@ -12,7 +12,7 @@ This is a solution to the [Interactive card details form challenge on Frontend M
 ## Links
 
 
-- Live Site URL: [https://kabrax01.github.io/QR-component---Frontend-Mentor/](https://kabrax01.github.io/QR-component---Frontend-Mentor/)
+- Live Site URL: [https://kabrax01.github.io/Interactive-card-details-FrontendMentor/](https://kabrax01.github.io/Interactive-card-details-FrontendMentor/)
 
 
 ## Built with
