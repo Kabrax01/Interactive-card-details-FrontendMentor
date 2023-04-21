@@ -20,7 +20,7 @@
   </head>
   <body>
     <main>
-      <section class="card-preview">
+      <div class="card-preview">
         <div class="card-back">
           <div class="card-back-cvc" id="back-cvc">000</div>
         </div>
@@ -38,15 +38,15 @@
             </div>
           </div>
         </div>
-      </section>
-      <section class="card-form" id="card-form">
+      </div>
+      <div class="card-form" id="card-form">
         <form class="form-details" id="form" name="form">
           <div class="container">
-            <label class="form-label" for="user-name">CARDHOLDER NAME</label>
+            <label class="form-label" for="card-name">CARDHOLDER NAME</label>
             <input
               class="form-input"
               type="text"
-              name="user-name"
+              name="card-name"
               id="card-name"
               maxlength="36"
               placeholder="e.g. Jane Appleseed"
@@ -96,15 +96,15 @@
           </div>
           <button class="button" type="submit" id="button">Confirm</button>
         </form>
-      </section>
-      <section class="thank-you hidden" id="thank-you">
+      </div>
+      <div class="thank-you hidden" id="thank-you">
         <img class="complete-img" src="images/icon-complete.svg" alt="" />
         <h1 class="header">THANK YOU!</h1>
         <p class="paragraph">We`we added your card details</p>
         <button class="button" type="submit" id="button-continue">
           Continue
         </button>
-      </section>
+      </div>
     </main>
     <script type="module" src="index.js"></script>
   </body>
