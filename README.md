@@ -6,8 +6,8 @@ This is a solution to the [Interactive card details form challenge on Frontend M
 ## Screenshot
 
 ![](/images/start.png)
-![](/images/bg-card-back.png)
-![](/images/mobile.png)
+![](/images/finish.png)
+![](/images/active.png)
 
 ## Links
 
