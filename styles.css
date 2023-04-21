@@ -226,7 +226,7 @@ main {
 
   .card-form,
   .thank-you {
-    padding: 6rem 1.2rem 0 22rem;
+    padding: 6rem 1.2rem 2rem 22rem;
     display: flex;
     flex-direction: column;
     width: 27rem;
