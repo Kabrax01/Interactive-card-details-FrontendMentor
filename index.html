@@ -16,7 +16,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <title>I dont know yet</title>
+    <title>Interactive card details</title>
   </head>
   <body>
     <main>
@@ -27,40 +27,44 @@
         <div class="card-front">
           <div class="card-front-container">
             <img src="images/card-logo.svg" alt="" />
-            <div class="card-front-numbers" id="front-numbers">0000 0000 0000 0000</div>
+            <div class="card-front-numbers" id="front-numbers">
+              0000 0000 0000 0000
+            </div>
             <div class="card-front-bottom_text">
               <div class="card-front-name" id="front-name">JANE APPLESEED</div>
-              <div class="card-front-date" id="front-date"><span id="front-month">00</span>/<span id="front-year">00</span></div>
+              <div class="card-front-date" id="front-date">
+                <span id="front-month">00</span>/<span id="front-year">00</span>
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="card-form">
+      <section class="card-form" id="card-form">
         <form class="form-details" id="form" name="form">
           <div class="container">
-          <label class="form-label" for="name">CARDHOLDER NAME</label>
-          <input
-            class="form-input"
-            type="text"
-            name="name"
-            id="card-name"
-            maxlength="36"
-            placeholder="e.g. Jane Appleseed"
-          /><span class="error" id="name-error"></span>
+            <label class="form-label" for="name">CARDHOLDER NAME</label>
+            <input
+              class="form-input"
+              type="text"
+              name="name"
+              id="card-name"
+              maxlength="36"
+              placeholder="e.g. Jane Appleseed"
+            /><span class="error" id="name-error"></span>
           </div>
           <div class="container">
-          <label class="form-label" for="card-number">CARD NUMBER</label>
-          <input
-            class="form-input"
-            type="number"
-            name="card-number"
-            id="card-number"
-            min="0"
-            max="9"
-            minlength="0"
-            maxlength="16"
-            placeholder="e.g. 1234 5678 9123 0000"
-          /><span class="error" id="number-error"></span>
+            <label class="form-label" for="card-number">CARD NUMBER</label>
+            <input
+              class="form-input"
+              type="number"
+              name="card-number"
+              id="card-number"
+              min="0"
+              max="9"
+              minlength="0"
+              maxlength="16"
+              placeholder="e.g. 1234 5678 9123 0000"
+            /><span class="error" id="number-error"></span>
           </div>
           <div class="second-container">
             <div class="input-set">
@@ -97,8 +101,15 @@
           <button class="button" type="submit" id="button">Confirm</button>
         </form>
       </section>
+      <section class="thank-you hidden" id="thank-you">
+        <img class="complete-img" src="images/icon-complete.svg" alt="" />
+        <h1 class="header">THANK YOU!</h1>
+        <p class="paragraph">We`we added your card details</p>
+        <button class="button" type="submit" id="button-continue">
+          Continue
+        </button>
+      </section>
     </main>
-
-    <script type="module" src="scripts.js"></script>
+    <script type="module" src="index.js"></script>
   </body>
 </html>

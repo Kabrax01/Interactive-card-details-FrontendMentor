@@ -1,9 +1,17 @@
 "use strict";
 import {
   isValidNumber,
-  isValidName, isvalidYear, isvalidMonth, validation, monthValid, yearValid
+  isValidName,
+  validationReset,
+  isValidMonth,
+  isValidYear,
+  isValidCvc,
+  nameValid,
+  numberValid,
+  monthValid,
+  yearValid,
+  cvcValid
 } from "./validation.js";
-
 
 const cardNumber = document.querySelector("#card-number");
 const name = document.querySelector("#card-name");
@@ -21,6 +29,11 @@ const monthErr = document.querySelector("#month-error");
 const yearErr = document.querySelector("#year-error");
 const cvcErr = document.querySelector("#cvc-error");
 const button = document.querySelector("#button");
+const inputSection = document.querySelector("#card-form");
+const thanksSection = document.querySelector("#thank-you");
+const contButton = document.querySelector("#button-continue");
+const labels = document.querySelectorAll(".form-label");
+const errMessage = document.querySelectorAll(".error");
 
 function trim(inputEl, num) {
   if (inputEl.value.length > num) inputEl.value = inputEl.value.slice(0, num);
@@ -67,24 +80,40 @@ fillDisplay(month, monthDisplay, 2);
 fillDisplay(year, yearDisplay, 2);
 fillDisplay(cvc, cvcDisplay, 3);
 
+//*****VALIDATION*****//
 
 button.addEventListener("click", (e) => {
   e.preventDefault();
 
   isValidName(name, nameErr, 35, 4);
   isValidNumber(cardNumber, numberErr, 16, 16);
-  isValidNumber(month, monthErr, 2, 2);
-  isValidNumber(year, yearErr, 2, 2);
-  isValidNumber(cvc, cvcErr, 3, 3);
+  isValidMonth(month, year, monthErr, 2, 2);
+  isValidYear(month, year, yearErr, 2, 2);
+  isValidCvc(cvc, cvcErr, 3, 3);
 
-  if (validation === 1) {
-  isvalidMonth(month, year, monthErr);
-  isvalidYear(month, year, yearErr);
+  if (nameValid === 1 && numberValid === 1 && monthValid === 1 && yearValid === 1 && cvcValid === 1) {
+    inputSection.classList.toggle("hidden");
+    thanksSection.classList.toggle("hidden");
   }
+});
 
-  if (monthValid === 1 && yearValid === 1){
-    console.log('GREAT SUCCES 🫡');
-  }
+//*****APP RESET*****//
 
-  console.log(validation);
+contButton.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  thanksSection.classList.toggle("hidden");
+  inputSection.classList.toggle("hidden");
+
+  cardNumber.value = "";
+  name.value = "";
+  month.value = "";
+  year.value = "";
+  cvc.value = "";
+  nameDisplay.textContent = "JANE APPLESEED";
+  cardNumberDisplay.textContent = "0000 0000 0000 0000";
+  monthDisplay.textContent = "00";
+  yearDisplay.textContent = "00";
+  cvcDisplay.textContent = "000";
+  validationReset();
 });

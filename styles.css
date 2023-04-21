@@ -1,5 +1,5 @@
 :root {
-  --Violet: rgba(100,72,254,1);
+  --Violet: rgba(100, 72, 254, 1);
   --Red: hsl(0, 100%, 66%);
   --White: hsl(0, 0%, 100%);
   --Light_grayish_violet: hsl(270, 3%, 87%);
@@ -17,14 +17,12 @@ body {
 main {
   display: flex;
   flex-direction: column;
-  /* height: 100vh; */
 }
 
 .card-preview {
   background-image: url(images/bg-main-mobile.png);
   background-size: cover;
   height: 15rem;
-  min-width: 100vw;
   position: relative;
 }
 
@@ -91,7 +89,8 @@ main {
   text-align: right;
 }
 
-.card-form {
+.card-form,
+.thank-you {
   padding: 6rem 1.2rem 0;
   display: flex;
   flex-direction: column;
@@ -121,17 +120,20 @@ main {
 .input-set:nth-of-type(1) {
   min-width: 0;
   flex-shrink: 2;
+  flex-grow: 1;
 }
 
 .input-set:nth-of-type(2) {
   min-width: 0;
   flex-shrink: 2;
+  flex-grow: 1;
   margin-left: 0.5rem;
 }
 
 .input-set:nth-of-type(3) {
   min-width: 0;
   flex-shrink: 1;
+  flex-grow: 2;
   margin-left: 0.5rem;
 }
 
@@ -145,10 +147,11 @@ main {
   border-color: transparent;
   letter-spacing: 1px;
   font-family: inherit;
+  cursor: pointer;
 }
 
 .button:active {
-  transform: translateY(2px)
+  transform: translateY(2px);
 }
 
 .form-label {
@@ -166,7 +169,7 @@ main {
 }
 
 .form-input:focus {
-  outline-color: var(--Violet) !important
+  outline-color: var(--Violet) !important;
 }
 
 ::placeholder {
@@ -184,4 +187,106 @@ main {
 
 .err {
   border-color: var(--Red);
+}
+
+.complete-img {
+  height: 5rem;
+  width: 5rem;
+  margin: 0 auto;
+}
+
+.thank-you {
+  text-align: center;
+}
+
+.header {
+  letter-spacing: 2px;
+  font-weight: 500;
+  margin-top: 2rem;
+}
+
+.paragraph {
+  color: var(--Dark_grayish_violet);
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 1440px) {
+  main {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .card-preview {
+    background-image: url(images/bg-main-desktop.png);
+    background-size: cover;
+    height: 100vh;
+    width: 30.1875rem;
+    position: relative;
+  }
+
+  .card-form,
+  .thank-you {
+    padding: 6rem 1.2rem 0 22rem;
+    display: flex;
+    flex-direction: column;
+    width: 27rem;
+  }
+
+  .card-back {
+    width: 27.93rem;
+    height: 15.31rem;
+    background-image: url(images/bg-card-back.png);
+    background-size: cover;
+    position: absolute;
+    top: 31rem;
+    left: 11rem;
+  }
+
+  .card-back-cvc {
+    position: absolute;
+    top: 6.9rem;
+    left: 22rem;
+    color: var(--White);
+    font-size: 1.1rem;
+  }
+
+  .card-front {
+    position: absolute;
+    width: 27.93rem;
+    height: 15.31rem;
+    background-image: url(images/bg-card-front.png);
+    background-size: cover;
+    top: 16rem;
+    left: 8rem;
+  }
+
+  .card-front-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem 1.5rem;
+  }
+
+  .card-front-container > img {
+    height: 2.9375rem;
+    padding-bottom: 4rem;
+  }
+
+  .card-front-numbers {
+    font-size: 2rem;
+    letter-spacing: 0.06rem;
+    color: var(--White);
+  }
+
+  .card-front-bottom_text {
+    display: flex;
+    padding-top: 1rem;
+    font-size: 1rem;
+    width: 100%;
+    color: var(--White);
+  }
+}
+
+.hidden {
+  display: none;
 }
